@@ -25,6 +25,11 @@ public class Main {
 			System.out.println("Whoops! That didn't work. The error above should say why in a bit more detail.");
 		}
 		String name = Main.getNameFromPage(page);
+		if (name.contentEquals("People")) {
+			//The ID we were given is invalid.
+			System.out.println("The ID you gave was invalid! This may also be because the person does not wish to be publically searchable. Goodbye.");
+			System.exit(1); //Use a non-zero exit just in case we were getting parsed by something (not that that is overly likely)
+		}
 		System.out.println("This person is called " + name + ". Do you want me to try and find out as much about them as I can? (Y/N)");
 		String strResp = cmdInst.readLine();
 		if (strResp.equalsIgnoreCase("y")) {
