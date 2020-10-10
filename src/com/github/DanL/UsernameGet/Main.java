@@ -44,6 +44,8 @@ public class Main {
 			System.exit(0);
 		}
 		//Since the other two branches end in system.exit, I can put code down here.
+		System.out.println("Doing research on " + name + ". We are connecting to the secure intranet, so please enter your credentials.");
+		
 	}
 	
 	/**
