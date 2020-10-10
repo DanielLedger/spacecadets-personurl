@@ -45,7 +45,18 @@ public class Main {
 		}
 		//Since the other two branches end in system.exit, I can put code down here.
 		System.out.println("Doing research on " + name + ". We are connecting to the secure intranet, so please enter your credentials.");
-		
+		System.out.print("Username: ");
+		String uName = cmdInst.readLine();
+		System.out.print("Password (not echoed): ");
+		char[] pwd = cmdInst.readPassword();
+		NetUtils.AuthCreds auth = new NetUtils.AuthCreds(uName, String.copyValueOf(pwd));
+		//For a test, get the secure intranet homepage.
+		try {
+			System.out.println(NetUtils.getPage("https://secure.ecs.soton.ac.uk", auth));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	
 	/**

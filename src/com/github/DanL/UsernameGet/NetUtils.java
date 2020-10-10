@@ -11,7 +11,7 @@ public class NetUtils {
 	 * @param user - Username
 	 * @param password - Password
 	 */
-	public class AuthCreds{
+	public static class AuthCreds{
 		
 		private String u;
 		private String p;
