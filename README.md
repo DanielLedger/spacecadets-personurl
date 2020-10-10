@@ -1,4 +1,4 @@
-# spacecadets-personurl
+# Name from ID
 
 This is challenge 1 of the UoS space cadets program. It's quite self-explanatory, there's no command line options or anything (yet).
 
