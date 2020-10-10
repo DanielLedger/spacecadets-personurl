@@ -25,7 +25,20 @@ public class Main {
 			System.out.println("Whoops! That didn't work. The error above should say why in a bit more detail.");
 		}
 		String name = Main.getNameFromPage(page);
-		System.out.println("This person is called " + name + ".");
+		System.out.println("This person is called " + name + ". Do you want me to try and find out as much about them as I can? (Y/N)");
+		String strResp = cmdInst.readLine();
+		if (strResp.equalsIgnoreCase("y")) {
+			//TODO: Add features.
+		}
+		else if (strResp.equalsIgnoreCase("n")){
+			System.out.println("Goodbye!");
+			System.exit(0);
+		}
+		else {
+			System.out.println("Interpreting invalid answer as 'no'. Goodbye!");
+			System.exit(0);
+		}
+		//Since the other two branches end in system.exit, I can put code down here.
 	}
 	
 	/**
